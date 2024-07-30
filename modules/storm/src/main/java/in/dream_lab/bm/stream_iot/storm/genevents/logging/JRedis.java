@@ -21,7 +21,7 @@ public class JRedis{
     public JRedis(){
         this.threshold = GlobalConstants.thresholdFlushToLog; //2000 etc
     	this.appName = "/home/cc/test_test.log";
-        this.jedis = new Jedis(this.HOSTNAME, 6379);
+        this.jedis = new Jedis(this.HOSTNAME, 6379, 60000);
         this.p = jedis.pipelined(); 
  
     }
@@ -31,7 +31,7 @@ public class JRedis{
     	String[] fileName2 = fileName.split("/");
 	String[] file = fileName2[fileName2.length-1].split("-");
 	this.appName = file[1];
-        this.jedis = new Jedis(this.HOSTNAME, 6379);
+        this.jedis = new Jedis(this.HOSTNAME, 6379, 60000);
         this.p = jedis.pipelined(); 
     }
  
