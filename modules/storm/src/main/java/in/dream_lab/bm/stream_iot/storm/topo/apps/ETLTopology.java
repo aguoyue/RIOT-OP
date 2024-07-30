@@ -56,7 +56,7 @@ public class ETLTopology
 		 conf.setDebug(false);
 	         conf.put("topology.backpressure.enable", true);
  	
-		 conf.setNumWorkers(2);
+		 conf.setNumWorkers(1);
 		 
 		 Properties p_=new Properties();
 		 InputStream input = new FileInputStream(taskPropFilename);
