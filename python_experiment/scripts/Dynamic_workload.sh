@@ -37,7 +37,7 @@ trap cleanup EXIT
 # Loop for two applications
 for app in "run_PREDICT_sys.sh" "run_PREDICT_taxi.sh"; do
     # Clear old data
-    redis-cli flushall
+    redis-cli -h redis flushall
 
     # Start the application in the background
     bash /home/cc/storm/riot-bench/python_experiment/scripts/"$app" 0.48 test
