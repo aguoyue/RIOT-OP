@@ -51,7 +51,7 @@ public class IoTPredictionTopologySYS {
         Config conf = new Config();
         conf.setDebug(false);
         conf.put("topology.backpressure.enable", true);
-        conf.setNumWorkers(5);
+        conf.setNumWorkers(3);
 
 
         Properties p_=new Properties();
